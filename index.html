@@ -1,134 +1,471 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title id="pageTitle">Business Website</title>
-  <meta name="description" id="pageDescription" content="Modern local business website" />
-  <link rel="stylesheet" href="styles.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="TN Digital Technologies is a professional IT service company website builder and digital technology studio.">
+  <meta property="og:title" content="TN Digital Technologies">
+  <meta property="og:description" content="Create clean professional IT business websites with copy, media, SEO, analytics, CRM, and deployment tools.">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <title>TN Digital Technologies</title>
+  <link rel="stylesheet" href="style.css">
+  <script type="application/ld+json" id="structuredData">
+    {"@context":"https://schema.org","@type":"SoftwareApplication","name":"TN Digital Technologies","applicationCategory":"BusinessApplication","operatingSystem":"Any"}
+  </script>
 </head>
 <body>
-  <header class="site-header">
-    <a class="brand" href="#home" data-nav="home">
-      <span id="brandName">Business</span>
-      <small id="brandTagline">Wholesale & Retail</small>
-    </a>
-    <button class="menu-btn" id="menuBtn" aria-label="Open menu">☰</button>
-    <nav class="nav" id="nav">
-      <a href="#home" data-nav="home">Home</a>
-      <a href="#products" data-nav="products">Products</a>
-      <a href="#gallery" data-nav="gallery">Gallery</a>
-      <a href="#wholesale" data-nav="wholesale">Wholesale</a>
-      <a href="#contact" data-nav="contact">Contact</a>
-    </nav>
-  </header>
-
-  <main>
-    <section id="home" class="hero section active">
-      <div class="hero-bg" id="heroBg"></div>
-      <div class="hero-content">
-        <span class="eyebrow" id="heroTagline"></span>
-        <h1 id="heroTitle"></h1>
-        <p id="heroDescription"></p>
-        <div class="hero-actions">
-          <a class="btn primary" href="#products" data-nav="products">View Products</a>
-          <a class="btn secondary" id="heroWhatsapp" target="_blank">WhatsApp Enquiry</a>
-        </div>
-      </div>
-    </section>
-
-    <section class="section light" id="featuresSection">
-      <div class="container">
-        <div class="section-title">
-          <span class="eyebrow">Why choose us</span>
-          <h2>Reliable supply for local businesses</h2>
-        </div>
-        <div class="cards" id="featuresGrid"></div>
-      </div>
-    </section>
-
-    <section class="section" id="aboutSection">
-      <div class="container split">
+  <div class="app-shell">
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="brand-mark">BA</div>
         <div>
-          <span class="eyebrow">About</span>
-          <h2 id="aboutTitle"></h2>
-          <p id="aboutText"></p>
-          <ul class="check-list" id="servicesList"></ul>
+          <h1>TN Digital Technologies</h1>
+          <p>Professional website studio</p>
         </div>
-        <img class="about-img" id="aboutImg" alt="Business interior" />
       </div>
-    </section>
 
-    <section id="products" class="section page-section">
-      <div class="container">
-        <div class="section-title center">
-          <span class="eyebrow">Products</span>
-          <h2>Product catalogue</h2>
-          <p>Search products and send enquiry directly on WhatsApp.</p>
-        </div>
-        <div class="toolbar">
-          <input id="searchInput" type="search" placeholder="Search products..." />
-          <select id="categoryFilter">
-            <option value="all">All Categories</option>
-          </select>
-        </div>
-        <div class="product-grid" id="productGrid"></div>
-      </div>
-    </section>
+      <nav class="nav-list" aria-label="Application navigation">
+        <a href="#dashboardHome" class="active">Dashboard</a>
+        <a href="#projects">Projects</a>
+        <a href="#templates">Templates</a>
+        <a href="#wizard">New Business</a>
+        <a href="#ai-tools">Assistant</a>
+        <a href="#media">Media Library</a>
+        <a href="#deploy">Deploy</a>
+        <a href="#analytics">Analytics</a>
+        <a href="#admin">Admin</a>
+        <a href="#settings">Settings</a>
+      </nav>
 
-    <section id="gallery" class="section light page-section">
-      <div class="container">
-        <div class="section-title center">
-          <span class="eyebrow">Gallery</span>
-          <h2>Shop and stock photos</h2>
-        </div>
-        <div class="gallery" id="galleryGrid"></div>
-      </div>
-    </section>
-
-    <section id="wholesale" class="section page-section">
-      <div class="container split">
+      <div class="sidebar-card">
+        <span class="status-dot"></span>
         <div>
-          <span class="eyebrow">Wholesale</span>
-          <h2>Bulk supply enquiry</h2>
-          <p id="policyText"></p>
-          <div class="notice">Best for kirana stores, local retailers and regular bulk buyers.</div>
+          <strong>Production Mode</strong>
+          <p>Static, local, responsive, Netlify-ready.</p>
         </div>
-        <form class="form-card" id="wholesaleForm">
-          <h3>Send Wholesale Request</h3>
-          <input name="name" required placeholder="Your name / shop name" />
-          <input name="phone" required placeholder="Mobile number" />
-          <select name="category" required id="formCategory"></select>
-          <textarea name="message" rows="4" required placeholder="Write item name, quantity and requirement"></textarea>
-          <button class="btn primary" type="submit">Send on WhatsApp</button>
-        </form>
       </div>
-    </section>
+    </aside>
 
-    <section id="contact" class="section dark page-section">
-      <div class="container contact-grid">
+    <main class="dashboard">
+      <header class="topbar" id="dashboardHome">
         <div>
-          <span class="eyebrow">Contact</span>
-          <h2 id="contactName"></h2>
-          <p id="contactAddress"></p>
-          <p id="contactHours"></p>
-          <div class="contact-actions">
-            <a class="btn primary" id="callBtn">Call Now</a>
-            <a class="btn secondary" id="whatsappBtn" target="_blank">WhatsApp</a>
+          <p class="eyebrow">Welcome back</p>
+          <h2>Launch a premium business website from one workspace.</h2>
+        </div>
+        <div class="topbar-actions">
+          <button class="ghost-button" id="themeModeButton" type="button">Dark Mode</button>
+          <button class="ghost-button" id="resetButton" type="button">Reset</button>
+          <button class="primary-button" id="generateButton" type="button">Refresh Preview</button>
+        </div>
+      </header>
+
+      <section class="overview-grid">
+        <article class="metric-card">
+          <span>Visitors</span>
+          <strong id="visitorMetric">2,840</strong>
+          <p>+18% this month</p>
+        </article>
+        <article class="metric-card">
+          <span>WhatsApp Clicks</span>
+          <strong id="whatsappMetric">416</strong>
+          <p>Best channel today</p>
+        </article>
+        <article class="metric-card">
+          <span>Website Score</span>
+          <strong id="scoreMetric">82</strong>
+          <p>Ready to improve</p>
+        </article>
+        <article class="metric-card">
+          <span>Deploy Status</span>
+          <strong id="deployMetric">Draft</strong>
+          <p>Netlify package ready</p>
+        </article>
+      </section>
+
+      <section class="quick-actions" aria-label="Quick Actions">
+        <h3>Quick Actions</h3>
+        <button type="button" data-jump="#wizard">Create New Business</button>
+        <button type="button" data-jump="#ai-tools">Run Suggestions</button>
+        <button type="button" data-jump="#media">Open Media Library</button>
+        <button type="button" data-jump="#deploy">Deploy Website</button>
+      </section>
+
+      <section class="workspace-grid">
+        <div class="left-workspace">
+          <section class="panel dashboard-panel" id="projects">
+            <div class="panel-heading">
+              <div>
+                <p class="eyebrow">Recent Projects</p>
+                <h3>Business workspace</h3>
+              </div>
+              <button class="ghost-button small" type="button">Create New Business</button>
+            </div>
+            <div class="project-list">
+              <article>
+                <div class="project-icon">TF</div>
+                <div>
+                  <strong id="recentProjectName">TN Digital Technologies</strong>
+                  <p>Live preview updated instantly</p>
+                </div>
+                <span>Active</span>
+              </article>
+              <article>
+                <div class="project-icon alt">IT</div>
+                <div>
+                  <strong>Business Suggestions</strong>
+                  <p>Copy, SEO, design and business advisor</p>
+                </div>
+                <span>Ready</span>
+              </article>
+            </div>
+          </section>
+
+          <section class="panel dashboard-panel" id="templates">
+            <div class="panel-heading">
+              <div>
+                <p class="eyebrow">Templates</p>
+                <h3>Premium business starters</h3>
+              </div>
+            </div>
+            <div class="template-grid">
+              <button type="button" data-template="Luxury">Luxury</button>
+              <button type="button" data-template="Medical">Medical</button>
+              <button type="button" data-template="Restaurant">Restaurant</button>
+              <button type="button" data-template="Wholesale">Wholesale</button>
+            </div>
+          </section>
+
+          <section class="panel wizard-panel" id="wizard">
+            <div class="panel-heading">
+              <div>
+                <p class="eyebrow">New Business Wizard</p>
+                <h3>Step-by-step builder</h3>
+              </div>
+              <div class="step-counter"><span id="currentStepText">Step 1</span> of 9</div>
+            </div>
+            <div class="wizard-steps" id="wizardSteps">
+              <button class="active" data-step="0" type="button">Details</button>
+              <button data-step="1" type="button">Logo</button>
+              <button data-step="2" type="button">Photos</button>
+              <button data-step="3" type="button">Products</button>
+              <button data-step="4" type="button">Services</button>
+              <button data-step="5" type="button">Assistant</button>
+              <button data-step="6" type="button">Theme</button>
+              <button data-step="7" type="button">Preview</button>
+              <button data-step="8" type="button">Deploy</button>
+            </div>
+
+            <div class="wizard-card active" data-panel="0" id="profile">
+              <div class="section-heading"><span>01</span><h3>Business Details</h3></div>
+              <div class="form-grid">
+                <label>Business name<input id="businessName" type="text" value="TN Digital Technologies" placeholder="Example: TN Digital Technologies"></label>
+                <label>Category<input id="businessCategory" type="text" value="IT support, cloud solutions and cybersecurity" placeholder="IT services, cloud, cybersecurity"></label>
+                <label>Phone / WhatsApp<input id="phoneNumber" type="tel" value="+91 98765 43210" placeholder="+91 98765 43210"></label>
+                <label>Email<input id="emailAddress" type="email" value="hello@tndigitaltechnologies.com" placeholder="hello@company.com"></label>
+                <label>Target customers<input id="targetCustomers" type="text" value="Startups, offices and growing businesses" placeholder="Startups, offices, enterprises"></label>
+              <label>Business hours<input id="businessHours" type="text" value="Mon-Fri, 9:30 AM - 6:30 PM" placeholder="Mon-Fri, 9 AM - 6 PM"></label>
+              <label>Google Map query<input id="mapQuery" type="text" value="Bengaluru IT services company" placeholder="Business name or area"></label>
+              <label>Google Maps URL<input id="googleMapUrl" type="url" placeholder="https://maps.google.com/..."></label>
+              <label>Coordinates<input id="mapCoordinates" type="text" placeholder="28.6139, 77.2090"></label>
+              <label>Landmark<input id="landmark" type="text" value="Near Tech Park Main Road" placeholder="Near tech park, metro, office tower"></label>
+              <label>Service area<input id="serviceArea" type="text" value="Serving clients across Bengaluru and remote teams" placeholder="Local area, city or remote coverage"></label>
+            </div>
+              <label>Short business description<textarea id="businessDescription" rows="4" placeholder="Tell customers what you do best.">A professional IT service company helping businesses manage secure networks, cloud systems, business websites, device support and reliable technology operations.</textarea></label>
+            </div>
+
+            <div class="wizard-card" data-panel="1">
+              <div class="section-heading"><span>02</span><h3>Upload Logo</h3></div>
+              <label class="upload-box large"><input id="logoUpload" type="file" accept="image/*"><span>Upload Logo</span><small>Used in dashboard, preview, SEO and footer.</small></label>
+            </div>
+
+            <div class="wizard-card" data-panel="2" id="media">
+              <div class="section-heading"><span>03</span><h3>Upload Business Photos</h3></div>
+              <div class="upload-grid">
+                <label class="upload-box"><input id="photoUpload" type="file" accept="image/*" multiple><span>Gallery Upload</span><small>Exterior, interior, products, staff</small></label>
+                <label class="upload-box"><input id="videoUpload" type="file" accept="video/*" multiple><span>Video Upload</span><small>Placeholder media support</small></label>
+                <label class="upload-box"><input id="catalogueUpload" type="file" accept="application/pdf"><span>PDF Catalogue</span><small>Product catalogue placeholder</small></label>
+                <label class="upload-box"><input id="productImageUpload" type="file" accept="image/*" multiple><span>Product Images</span><small>Product-focused assets</small></label>
+              </div>
+              <div class="image-analyzer">
+                <div>
+                  <strong>Image Analyzer</strong>
+                  <p id="imageInsight">Upload photos to detect office, team, services, logo, banner and missing assets.</p>
+                </div>
+                <button class="ghost-button" id="analyzeButton" type="button">Analyze</button>
+              </div>
+              <div class="photo-grid sortable" id="photoGrid" aria-live="polite"></div>
+            </div>
+
+            <div class="wizard-card" data-panel="3" id="offerings">
+              <div class="section-heading"><span>04</span><h3>Products</h3></div>
+              <label>Quick products list<textarea id="products" rows="4" placeholder="One product per line">Business website package
+Cloud setup package
+Cybersecurity audit</textarea></label>
+              <div class="manager-grid" id="productManager"></div>
+              <button class="ghost-button" id="addProductButton" type="button">Add Product Card</button>
+            </div>
+
+            <div class="wizard-card" data-panel="4">
+              <div class="section-heading"><span>05</span><h3>Services</h3></div>
+              <label>Quick services list<textarea id="services" rows="4" placeholder="One service per line">Managed IT support
+Network and server maintenance
+Website development and hosting
+Cybersecurity monitoring</textarea></label>
+              <div class="manager-grid" id="serviceManager"></div>
+              <button class="ghost-button" id="addServiceButton" type="button">Add Service Card</button>
+            </div>
+
+            <div class="wizard-card" data-panel="5" id="ai-tools">
+              <div class="section-heading"><span>06</span><h3>Business Assistant</h3></div>
+              <label>Client mindset<textarea id="aiMindset" rows="4" placeholder="Example: Clients want reliable support, security and fast response.">Clients want a reliable IT partner that feels professional, secure, responsive and capable of supporting daily business operations.</textarea></label>
+              <label>Business brief<textarea id="aiChatInput" rows="4" placeholder="Example: I run an IT support company. I help offices with networks, websites and cybersecurity."></textarea></label>
+              <div class="button-row">
+                <button class="tool-button" id="suggestButton" type="button">Smart Suggestion</button>
+                <button class="tool-button" id="copyButton" type="button">Copywriter</button>
+                <button class="tool-button" id="chatFillButton" type="button">Fill From Chat</button>
+              </div>
+              <div class="ai-action-grid">
+                <button data-ai="hero" type="button">Improve Hero</button>
+                <button data-ai="about" type="button">Rewrite About</button>
+                <button data-ai="faq" type="button">Generate FAQ</button>
+                <button data-ai="services" type="button">Generate Services</button>
+                <button data-ai="vision" type="button">Generate Vision</button>
+                <button data-ai="mission" type="button">Generate Mission</button>
+                <button data-ai="products" type="button">Product Descriptions</button>
+                <button data-ai="privacy" type="button">Privacy Policy</button>
+                <button data-ai="terms" type="button">Terms</button>
+                <button data-ai="contact" type="button">Contact Content</button>
+                <button data-ai="metaTitle" type="button">Meta Title</button>
+                <button data-ai="metaDescription" type="button">Meta Description</button>
+              </div>
+              <div class="ai-output" id="aiOutput">Use the assistant buttons to generate positioning, copy, SEO, policies and section ideas.</div>
+            </div>
+
+            <div class="wizard-card" data-panel="6" id="settings">
+              <div class="section-heading"><span>07</span><h3>Theme</h3></div>
+              <label>Premium theme
+                <select id="themeSelector">
+                  <option>Minimal</option><option>Corporate</option><option>Luxury</option><option>Medical</option><option>Restaurant</option><option>Electronics</option><option>Fashion</option><option>Wholesale</option><option>Industrial</option><option>School</option><option>Hotel</option><option>Corporate Dark</option><option>Apple Style</option><option>Modern Gradient</option>
+                </select>
+              </label>
+              <label>Designer command<input id="designerCommand" type="text" placeholder="Make my website corporate, modern, IT based"></label>
+              <div class="color-control-grid">
+                <label>App Primary<input id="appPrimaryColor" type="color" value="#0b3d91"></label>
+                <label>App Background<input id="appBackgroundColor" type="color" value="#f4f7fb"></label>
+                <label>App Text<input id="appTextColor" type="color" value="#1f2937"></label>
+                <label>Website Primary<input id="sitePrimaryColor" type="color" value="#0b3d91"></label>
+                <label>Website Secondary<input id="siteSecondaryColor" type="color" value="#38bdf8"></label>
+                <label>Website Background<input id="siteBackgroundColor" type="color" value="#ffffff"></label>
+                <label>Website Text<input id="siteTextColor" type="color" value="#1f2937"></label>
+                <label>Button Color<input id="siteButtonColor" type="color" value="#2563eb"></label>
+              </div>
+              <div class="button-row">
+                <button class="tool-button" id="applyThemeButton" type="button">Apply Theme</button>
+                <button class="tool-button" id="premiumModeButton" type="button">Premium Mode Credit Toggle</button>
+              </div>
+            </div>
+
+            <div class="wizard-card" data-panel="7">
+              <div class="section-heading"><span>08</span><h3>Website Health</h3></div>
+              <div class="health-grid">
+                <div class="score-ring"><strong id="overallScore">82</strong><span>Overall Score</span></div>
+                <div class="health-bars" id="healthBars"></div>
+              </div>
+              <div class="suggestion-list" id="healthSuggestions"></div>
+            </div>
+
+            <div class="wizard-card" data-panel="8" id="deploy">
+              <div class="section-heading"><span>09</span><h3>Deploy</h3></div>
+              <div class="deploy-grid">
+                <div class="deploy-card">
+                  <strong>Netlify</strong>
+                  <p>Download the generated website ZIP, then upload it to Netlify. No build command required.</p>
+                  <div class="button-row">
+                    <button class="primary-button" id="deployButton" type="button">Prepare Deploy</button>
+                    <button class="primary-button" id="downloadZipButton" type="button">Download Website ZIP</button>
+                  </div>
+                </div>
+                <div class="qr-card" id="qrCode">QR</div>
+                <label>Share link<input id="shareLink" type="text" value="https://businessai-studio.netlify.app" readonly></label>
+              </div>
+              <p class="deploy-status" id="deployStatus">Deployment Status: Draft</p>
+            </div>
+
+            <div class="wizard-controls">
+              <button class="ghost-button" id="prevStepButton" type="button">Previous</button>
+              <button class="primary-button" id="nextStepButton" type="button">Next Step</button>
+            </div>
+          </section>
+
+          <section class="panel advisor-panel">
+            <div class="panel-heading">
+              <div><p class="eyebrow">Business Advisor</p><h3>Recommendations</h3></div>
+              <button class="ghost-button small" id="advisorButton" type="button">Analyze Website</button>
+            </div>
+            <div class="advisor-list" id="advisorList"></div>
+          </section>
+
+          <section class="panel admin-panel" id="admin">
+            <div class="panel-heading">
+              <div><p class="eyebrow">Admin Panel</p><h3>Manage website assets</h3></div>
+            </div>
+            <div class="admin-tabs">
+              <button class="active" type="button">Products</button><button type="button">Services</button><button type="button">Gallery</button><button type="button">SEO</button><button type="button">Blog</button><button type="button">Testimonials</button>
+            </div>
+            <div class="form-grid">
+              <label>Meta title<input id="metaTitle" type="text" value="TN Digital Technologies | Managed IT Support"></label>
+              <label>Meta description<input id="metaDescription" type="text" value="Managed IT support, cloud setup, cybersecurity and business website services for professional companies."></label>
+              <label>SEO keywords<input id="seoKeywords" type="text" value="IT support, cloud solutions, cybersecurity, website development, managed services"></label>
+              <label>Social media<input id="socialLinks" type="text" value="Instagram, Facebook, Google Business"></label>
+            </div>
+          </section>
+
+          <section class="panel utilities-grid">
+            <article id="analytics">
+              <p class="eyebrow">Analytics</p>
+              <h3>Website analytics</h3>
+              <div class="analytics-list">
+                <span>Phone Calls <strong>128</strong></span>
+                <span>Contact Forms <strong>42</strong></span>
+                <span>Most Viewed Product <strong>Managed IT support</strong></span>
+              </div>
+            </article>
+            <article>
+              <p class="eyebrow">CRM</p>
+              <h3>Customer pipeline</h3>
+              <div class="crm-table" id="crmTable"></div>
+            </article>
+            <article>
+              <p class="eyebrow">Marketing Studio</p>
+              <h3>Festival & social generator</h3>
+              <div class="chip-grid">
+                <button type="button" data-poster="Diwali">Diwali</button><button type="button" data-poster="Eid">Eid</button><button type="button" data-poster="Christmas">Christmas</button><button type="button" data-poster="New Year">New Year</button><button type="button" data-poster="Republic Day">Republic Day</button><button type="button" data-poster="Independence Day">Independence Day</button><button type="button" data-poster="Instagram Post">Instagram</button><button type="button" data-poster="Google Business Description">Google Business</button>
+              </div>
+              <div class="ai-output compact" id="marketingOutput">Choose a format to generate branded content.</div>
+            </article>
+          </section>
+        </div>
+
+        <section class="panel preview-panel" aria-label="Live generated website preview">
+          <div class="preview-toolbar">
+            <div><span class="status-dot"></span><strong>Generated Website Preview</strong></div>
+            <span id="previewStatus">Ready</span>
           </div>
-        </div>
-        <iframe id="mapFrame" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-      </div>
-    </section>
-  </main>
 
-  <footer class="footer">
-    <p id="footerText"></p>
-  </footer>
+          <article class="website-preview theme-minimal" id="websitePreview">
+            <header class="site-header">
+              <div class="site-logo" id="previewLogo">BA</div>
+              <nav>
+                <a href="#previewAbout">About</a><a href="#previewProducts">Solutions</a><a href="#previewServices">Services</a><a href="#previewGallery">Gallery</a><a href="#previewFAQ">FAQ</a><a class="nav-cta" href="#previewContact">Contact</a>
+              </nav>
+            </header>
 
-  <a class="float-whatsapp" id="floatWhatsapp" target="_blank" aria-label="WhatsApp">WhatsApp</a>
+            <section class="site-hero animate-in">
+              <div class="hero-shape one"></div>
+              <div class="hero-shape two"></div>
+              <div class="hero-copy">
+                <span id="previewCategory">IT support, cloud solutions and cybersecurity</span>
+                <h2 id="previewName">TN Digital Technologies</h2>
+                <p id="previewHeroText">Professional IT support, cloud systems, cybersecurity and web solutions for modern businesses.</p>
+                <div class="hero-actions">
+                  <a id="whatsappHero" class="site-button" href="#" target="_blank" rel="noreferrer">WhatsApp Now</a>
+                  <a class="site-button secondary" href="#previewProducts">Explore Solutions</a>
+                </div>
+                <div class="hero-stats">
+                  <div><strong>99%</strong><span>Support uptime</span></div>
+                  <div><strong>24h</strong><span>Response window</span></div>
+                  <div><strong>50+</strong><span>Business systems</span></div>
+                </div>
+                <div class="scroll-indicator">Scroll</div>
+              </div>
+              <div class="hero-media" id="heroMedia"><span>Business Photo</span></div>
+            </section>
 
-  <script src="config.js"></script>
-  <script src="app.js"></script>
+            <section class="site-section about-layout" id="previewAbout">
+              <div class="about-image" id="aboutImageSlot"><span>About Image</span></div>
+              <div>
+                <p class="site-eyebrow">About</p>
+                <h3 id="previewAboutTitle">Technology support built for serious businesses</h3>
+                <p id="previewDescription">A professional IT service company helping businesses manage secure networks, cloud systems, business websites, device support and reliable technology operations.</p>
+                <div class="timeline">
+                  <div><strong>01</strong><span>Consultation</span></div>
+                  <div><strong>02</strong><span>Planning</span></div>
+                  <div><strong>03</strong><span>Deployment</span></div>
+                </div>
+                <div class="value-grid">
+                  <div><strong id="previewHours">Mon-Fri, 9:30 AM - 6:30 PM</strong><span>Business Hours</span></div>
+                  <div><strong id="previewTarget">Startups, offices and growing businesses</strong><span>Target Clients</span></div>
+                  <div><strong id="previewVision">Secure, scalable technology</strong><span>Vision</span></div>
+                </div>
+              </div>
+            </section>
+
+            <section class="site-section split-section">
+              <div id="previewProducts"><p class="site-eyebrow">Products</p><h3>Customer favorites</h3><div class="mini-card-grid" id="productList"></div></div>
+              <div id="previewServices"><p class="site-eyebrow">Services</p><h3>How we help</h3><div class="mini-card-grid" id="serviceList"></div></div>
+            </section>
+
+            <section class="site-section why-section">
+              <p class="site-eyebrow">Why choose us</p><h3>Reliable technology, cleaner operations and faster support.</h3>
+              <div class="why-grid">
+                <div><strong>Secure systems</strong><span>Networks, devices and access managed with practical security.</span></div>
+                <div><strong>Business-first support</strong><span>Clear communication, planned delivery and fast issue handling.</span></div>
+                <div><strong>Scalable setup</strong><span>Cloud, websites and IT operations designed to grow with the company.</span></div>
+                <div><strong>Clean documentation</strong><span>Professional handover, support notes and maintenance planning.</span></div>
+              </div>
+            </section>
+
+            <section class="site-section" id="previewGallery">
+              <p class="site-eyebrow">Gallery</p><h3>Inside the business</h3>
+              <div class="site-gallery" id="previewGalleryGrid"><div></div><div></div><div></div></div>
+            </section>
+
+            <section class="site-section testimonials-section">
+              <p class="site-eyebrow">Testimonials</p><h3>Customers trust us</h3>
+              <div class="testimonial-slider" id="testimonialSlider"></div>
+            </section>
+
+            <section class="site-section faq-section" id="previewFAQ">
+              <p class="site-eyebrow">FAQ</p><h3>Questions customers ask</h3>
+              <div class="faq-list" id="faqList"></div>
+            </section>
+
+            <section class="site-section blog-section">
+              <p class="site-eyebrow">Blog</p><h3>Business technology insights</h3>
+              <div class="blog-grid" id="blogGrid"></div>
+            </section>
+
+            <section class="site-section location-section">
+              <div>
+                <p class="site-eyebrow">Google Map</p><h3 id="previewMapTitle">Find us locally</h3>
+                <p id="previewLandmark">Near Tech Park Main Road</p><p id="previewServiceArea">Serving clients across Bengaluru and remote teams</p>
+              </div>
+              <a class="map-card" id="mapLink" href="https://www.google.com/maps/search/?api=1&query=Bengaluru%20IT%20services%20company" target="_blank" rel="noreferrer"><span>Open Google Maps</span></a>
+            </section>
+
+            <section class="site-section contact-section" id="previewContact">
+              <div><p class="site-eyebrow">Contact</p><h3>Ready to support your business</h3><p id="previewContactText">Call or message us for quick support, orders, and directions.</p></div>
+              <div class="contact-card">
+                <a id="phoneLink" href="tel:+919876543210">+91 98765 43210</a>
+                <a id="emailLink" href="mailto:hello@tndigitaltechnologies.com">hello@tndigitaltechnologies.com</a>
+                <label>Your name<input type="text" placeholder="Name"></label>
+                <label>Message<textarea rows="3" placeholder="How can we help?"></textarea></label>
+                <a id="whatsappButton" class="whatsapp-button" href="#" target="_blank" rel="noreferrer">WhatsApp</a>
+              </div>
+            </section>
+
+            <a id="floatingWhatsapp" class="floating-whatsapp" href="#" target="_blank" rel="noreferrer">WhatsApp</a>
+            <footer class="site-footer">
+              <p id="copyrightText">Copyright 2026 TN Digital Technologies. All rights reserved.</p>
+              <p id="developerCredit">Website Designed & Developed by <strong>Taha Nihal</strong> | TN Digital Technologies</p>
+            </footer>
+          </article>
+        </section>
+      </section>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
