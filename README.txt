@@ -1,74 +1,134 @@
-TN Digital Technologies
-=======================
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title id="pageTitle">Business Website</title>
+  <meta name="description" id="pageDescription" content="Modern local business website" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#home" data-nav="home">
+      <span id="brandName">Business</span>
+      <small id="brandTagline">Wholesale & Retail</small>
+    </a>
+    <button class="menu-btn" id="menuBtn" aria-label="Open menu">☰</button>
+    <nav class="nav" id="nav">
+      <a href="#home" data-nav="home">Home</a>
+      <a href="#products" data-nav="products">Products</a>
+      <a href="#gallery" data-nav="gallery">Gallery</a>
+      <a href="#wholesale" data-nav="wholesale">Wholesale</a>
+      <a href="#contact" data-nav="contact">Contact</a>
+    </nav>
+  </header>
 
-TN Digital Technologies is a static professional website builder configured for a modern IT service company theme. It runs with HTML, CSS and JavaScript only, with no backend and no build step.
+  <main>
+    <section id="home" class="hero section active">
+      <div class="hero-bg" id="heroBg"></div>
+      <div class="hero-content">
+        <span class="eyebrow" id="heroTagline"></span>
+        <h1 id="heroTitle"></h1>
+        <p id="heroDescription"></p>
+        <div class="hero-actions">
+          <a class="btn primary" href="#products" data-nav="products">View Products</a>
+          <a class="btn secondary" id="heroWhatsapp" target="_blank">WhatsApp Enquiry</a>
+        </div>
+      </div>
+    </section>
 
-Files
------
-index.html  - Dashboard, business wizard, admin tools and live generated website preview
-style.css   - Clean navy blue IT theme, responsive layout, cards, forms, buttons and hero styling
-script.js   - Local generation, uploads, image analysis, health scoring, CRM, SEO, deployment and preview logic
-assets/     - Local website assets, including the professional IT hero background image
-README.txt  - Project notes
+    <section class="section light" id="featuresSection">
+      <div class="container">
+        <div class="section-title">
+          <span class="eyebrow">Why choose us</span>
+          <h2>Reliable supply for local businesses</h2>
+        </div>
+        <div class="cards" id="featuresGrid"></div>
+      </div>
+    </section>
 
-How to run locally
-------------------
-Open index.html in any modern browser.
+    <section class="section" id="aboutSection">
+      <div class="container split">
+        <div>
+          <span class="eyebrow">About</span>
+          <h2 id="aboutTitle"></h2>
+          <p id="aboutText"></p>
+          <ul class="check-list" id="servicesList"></ul>
+        </div>
+        <img class="about-img" id="aboutImg" alt="Business interior" />
+      </div>
+    </section>
 
-Netlify hosting
----------------
-Upload the folder containing index.html, style.css, script.js, assets and README.txt to Netlify.
-No build command is needed.
-Publish directory can be the project folder itself.
+    <section id="products" class="section page-section">
+      <div class="container">
+        <div class="section-title center">
+          <span class="eyebrow">Products</span>
+          <h2>Product catalogue</h2>
+          <p>Search products and send enquiry directly on WhatsApp.</p>
+        </div>
+        <div class="toolbar">
+          <input id="searchInput" type="search" placeholder="Search products..." />
+          <select id="categoryFilter">
+            <option value="all">All Categories</option>
+          </select>
+        </div>
+        <div class="product-grid" id="productGrid"></div>
+      </div>
+    </section>
 
-Exporting a completed website
------------------------------
-Open the Deploy step in the app and click "Download Website ZIP".
-The browser will download a ZIP containing:
-- index.html
-- project-data.json
-- README.txt
+    <section id="gallery" class="section light page-section">
+      <div class="container">
+        <div class="section-title center">
+          <span class="eyebrow">Gallery</span>
+          <h2>Shop and stock photos</h2>
+        </div>
+        <div class="gallery" id="galleryGrid"></div>
+      </div>
+    </section>
 
-You can upload that downloaded ZIP or extracted folder to Netlify.
+    <section id="wholesale" class="section page-section">
+      <div class="container split">
+        <div>
+          <span class="eyebrow">Wholesale</span>
+          <h2>Bulk supply enquiry</h2>
+          <p id="policyText"></p>
+          <div class="notice">Best for kirana stores, local retailers and regular bulk buyers.</div>
+        </div>
+        <form class="form-card" id="wholesaleForm">
+          <h3>Send Wholesale Request</h3>
+          <input name="name" required placeholder="Your name / shop name" />
+          <input name="phone" required placeholder="Mobile number" />
+          <select name="category" required id="formCategory"></select>
+          <textarea name="message" rows="4" required placeholder="Write item name, quantity and requirement"></textarea>
+          <button class="btn primary" type="submit">Send on WhatsApp</button>
+        </form>
+      </div>
+    </section>
 
-Current Theme
--------------
-- Primary color: Navy Blue
-- Secondary color: Sky Blue
-- Background color: White / Light Grey
-- Text color: Dark Grey
-- Button color: Blue
-- Hero image: Professional IT office and technology background
+    <section id="contact" class="section dark page-section">
+      <div class="container contact-grid">
+        <div>
+          <span class="eyebrow">Contact</span>
+          <h2 id="contactName"></h2>
+          <p id="contactAddress"></p>
+          <p id="contactHours"></p>
+          <div class="contact-actions">
+            <a class="btn primary" id="callBtn">Call Now</a>
+            <a class="btn secondary" id="whatsappBtn" target="_blank">WhatsApp</a>
+          </div>
+        </div>
+        <iframe id="mapFrame" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </section>
+  </main>
 
-Features
---------
-- Professional dashboard
-- Step-by-step business wizard
-- Business profile form
-- Logo upload
-- Multiple business image upload
-- Smart multi-image placement: first image becomes hero, second image becomes about image, next images enrich product/service cards and the remaining images populate the gallery/testimonials
-- Product image, video and PDF catalogue upload placeholders
-- Photo preview grid
-- Image analyzer
-- Smart suggestions and copywriter tools
-- Product and service management cards
-- Google Maps query, URL and coordinates
-- Landmark and service area fields
-- Theme selector and dark mode
-- Working template palettes for corporate, luxury, medical, restaurant, electronics, fashion, wholesale, industrial, school, hotel, Apple style and modern gradient
-- Manual color controls for app primary, app background, app text, website primary, website secondary, website background, website text and button color
-- Live generated website preview at the bottom of the page
-- Generated website sections: navigation, hero, about, products, services, gallery, testimonials, FAQ, blog, Google Map, contact, WhatsApp button and footer
-- SEO fields, OpenGraph/Twitter meta placeholders and structured data updates
-- Footer credit: Website Designed & Developed by Taha Nihal | TN Digital Technologies
-- Premium mode can hide developer credit
-- Deployment section with Netlify status, QR placeholder and share link generation
-- Download Website ZIP button for completed projects
-- Analytics dashboard
-- CRM customer pipeline
-- Festival and social media content generator
+  <footer class="footer">
+    <p id="footerText"></p>
+  </footer>
 
-Notes
------
-The project is configured as a clean, professional IT service company website builder layout.
+  <a class="float-whatsapp" id="floatWhatsapp" target="_blank" aria-label="WhatsApp">WhatsApp</a>
+
+  <script src="config.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
